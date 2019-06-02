@@ -1,5 +1,6 @@
 # CTCI
-A repository containing my C++ solutions for various [Cracking the Coding Interview (6th ed)](http://www.crackingthecodinginterview.com/) problems. 
+A repository containing my C++ solutions for various [Cracking the Coding Interview (6th ed)](http://www.crackingthecodinginterview.com/) problems.
+You can find other suggested solutions on [CareerCup's GitHub page](https://github.com/careercup/CtCI-6th-Edition). 
 
 
 ## Problem Table
@@ -34,7 +35,7 @@ Note:
 | 14. DB   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |
 | 15. Thr  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |
 | 16. Med  |  V  |  X+ |  _  |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  _  |  _  |     |
-|          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
+|          |  _  |  _  |  _  |  _  |  _  |  _  |  V+ |  V+ |  _  |  V+ |  _  |  _  |  _  |     |
 | 17. Hard |  V+ |  V+ |  V+ |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
 |          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
 
