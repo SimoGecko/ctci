@@ -4,34 +4,51 @@ A repository containing my C++ solutions for various [Cracking the Coding Interv
 
 ## Problem Table
 
-- ☐ unsolved
-- ✓ solved
+- . unsolved
+- ✓ solved, pen and paper (no code)
+- ✓+ solved, code available (C++)
 - ✗ try again
+- - (code improvable)
 
-Note that not all of the solved solutions have accompanying code, depending on the exercises. Solutions are not heavility tested and might contain errors.
-Usually, one or multiple functions solve the problem, whereas the 'main()' function builds one or more testcases to show the function works. 
+Note:
+ Not all of the solved problems have accompanying code, depending on the exercise.
+ Solutions are not heavility tested and might contain errors.
+ Usually, one or multiple functions solve the problem, whereas the `main()` function builds one or more testcases to show that the function works. 
 
-|          | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 | 13 | 14 |
-|----------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
-| 1. Arr   |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |
-| 2. LL    |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |
-| 3. S,Q   |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |    |    |
-| 4. T,G   |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |
-| 5. Bit   |  ✓ |  ✓ |  ✓ |  ✗ |  ✓ |  ✓ |  ✓ |  ✗ |    |    |    |    |    |    |
-| 6. Math  |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ☐ |    |    |    |    |
-| 7. OO    |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |
-| 8. R,DP  |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |
-| 9. Sca   |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |
-| 10. S,S  |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |
-| 11. Test |  ✓ |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |    |    |    |    |    |    |    |    |
-| 12. C++  |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |
-| 13. Java |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |
-| 14. DB   |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |    |
-| 15. Thr  |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |    |    |    |    |    |    |
-| 16. Med  |  ✓ |  ☐ |  ☐ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |    |
-|          |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |
-| 17. Hard |  ✓ |  ✓ |  ✓ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |
-|          |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |  ☐ |    |
+
+|          |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  | 14  |
+|----------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1. Arr   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |
+| 2. LL    |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |
+| 3. S,Q   |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |     |
+| 4. T,G   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |
+| 5. Bit   |  V+ |  V+ |  V+ |  X  |  V  |  V+ |  V+ |  X+ |     |     |     |     |     |     |
+| 6. Math  |  V  |  V  |  V  |  V  |  V  |  V  |  V+ |  V  |  V  |  _  |     |     |     |     |
+| 7. OO    |  V  |  V  |  V  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |
+| 8. R,DP  |  V+ |  V+ |  V- |  V+ |  V+ |  V+ |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |
+| 9. Sca   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |
+| 10. S,S  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |
+| 11. Test |  V  |  V  |  V  |  V  |  _  |  _  |     |     |     |     |     |     |     |     |
+| 12. C++  |  V  |  V  |  V  |  V  |  V  |  V  |  V  |  _  |  _  |  _  |  _  |     |     |     |
+| 13. Java |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |
+| 14. DB   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |
+| 15. Thr  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |
+| 16. Med  |  V  |  X+ |  _  |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  _  |  _  |     |
+|          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
+| 17. Hard |  V  |  V  |  V  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
+|          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
+
+#### Statistics:
+Count:
+- _ (139)
+- V (47)
+- X (3)
+
+- + (21)
+- - (1)
+
+Progress:
+(47/189) [#####--------------] 25%
 
 
 ## Problem List

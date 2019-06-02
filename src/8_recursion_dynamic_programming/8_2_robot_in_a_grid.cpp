@@ -20,7 +20,7 @@ v2i RobotPath(vvb map)
 	{
 		for (int j = 0; j < h; ++j)
 		{
-			reach[i][j] = map[i][j] && ((i>0 && reach[i-1][j]) || (j>0 && reach[i][j-1]) || (i==0 && j==0)); // cell free and up/left is reachable
+			reach[i][j] = map[i][j] && ((i>0 && reach[i-1][j]) || (j>0 && reach[i][j-1]) || (i==0 && j==0)); // cell free and up/left is reachable or start
 		}
 	}
 	if(!reach[w-1][h-1]) return res; // unreachable
@@ -29,8 +29,8 @@ v2i RobotPath(vvb map)
 	while(i>0 || j>0) // backtrack
 	{
 		res.push_back(make_pair(i,j));
-		if     (i>0&&reach[i-1][j]) i--;
-		else if(j>0&&reach[i][j-1]) j--;
+		if     (i>0 && reach[i-1][j]) i--;
+		else if(j>0 && reach[i][j-1]) j--;
 	}
 	res.push_back(make_pair(0, 0));
 	reverse(res.begin(), res.end());
@@ -49,11 +49,11 @@ int main()
 	};
 	/*
 	╔═════╗
-	║     ║
+	║s    ║
 	║ ### ║
 	║    #║
 	║  #  ║
-	║ #   ║
+	║ #  e║
 	╚═════╝
 	*/
 
@@ -63,12 +63,10 @@ int main()
 		cout << "target unreachable";
 	else
 	{
-		cout << "The path of the robot is:"<<endl;
+		cout << "The path of the robot is:" << endl;
 		for(auto p : path) cout << "(" << p.first << "," << p.second << "), ";
 		cout << endl;
 	}
-
-
 
 	return 0;
 }
