@@ -8,7 +8,7 @@ A repository containing my C++ solutions for various [Cracking the Coding Interv
 - ✓ solved, pen and paper (no code)
 - ✓+ solved, code available (C++)
 - ✗ try again
-- - (code improvable)
+- \- (code improvable)
 
 Note:
  Not all of the solved problems have accompanying code, depending on the exercise.
@@ -35,19 +35,11 @@ Note:
 | 15. Thr  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |
 | 16. Med  |  V  |  X+ |  _  |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  _  |  _  |     |
 |          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
-| 17. Hard |  V  |  V  |  V  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
+| 17. Hard |  V+ |  V+ |  V+ |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
 |          |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |
 
-#### Statistics:
-Count:
-- _ (139)
-- V (47)
-- X (3)
 
-- + (21)
-- - (1)
-
-Progress:
+### Progress:
 (47/189) [#####--------------] 25%
 
 
