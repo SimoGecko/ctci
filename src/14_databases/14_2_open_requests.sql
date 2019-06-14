@@ -11,11 +11,11 @@ FROM Buildings LEFT JOIN (
 ON Buildings.BuildingID = T.BuildingID
 
 
+
 -- SOLUTION
 
 SELECT BuildingName, ISNULL(Count, 0) as 'Count'
-FROM Buildings
-LEFT JOIN (
+FROM Buildings LEFT JOIN (
 	SELECT Apartments.BuildingID, count(*) as 'Count'
 	FROM Requests INNER JOIN Apartments
 		ON Requests.AptID = Apartments.AptID

@@ -6,7 +6,7 @@ using namespace std;
 vector<int> x;
 int n;
 
-vector<int> sequence(int n)
+vector<int> sequence(int n) // returns sequence [0..n]
 {
 	vector<int> res(n+1);
 	for (int i = 0; i <= n; ++i)
