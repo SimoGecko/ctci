@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# solution to compile & test
+sln/*
