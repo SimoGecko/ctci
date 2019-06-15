@@ -1,8 +1,36 @@
+// (c) Simone Guggiari 2019 - CTCI
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+
+//using additional DS (space)
+// O(100) space
+// O(n) time
+const char minAscii = ' '; // 32
+const char maxAscii = '~'; // 126
+//assume allowed chars are a-z A-Z 0-9
+
+bool isUnique(const string& s){
+    bool seen[maxAscii-minAscii+1];
+    for(size_t i=minAscii; i<=maxAscii; ++i) seen[i-minAscii]=false;
+
+    for(size_t i=0; i<s.size(); ++i){
+        if(seen[s[i]-minAscii]) return false;
+        seen[s[i]-minAscii] = true;
+    }
+    return true;
+}
+
+
+//without using any additional space
+// O(1) space
+// O(n logn) time
+
+
+
+//TODO finish
 void swapChars(string &s, int a, int b)
 {
     char tmp = s[a];
@@ -33,17 +61,19 @@ void SortString(string& s, int l, int r)
     SortString(s, i, r);
 }
 
-bool isUnique(string s)
-{
-    return false;
-}
+
+
+
+
+//--------------
 
 int main()
 {
-    string s = "probably";
-    SortString(s, 0, s.length() - 1);
-    cout << s << endl;
-
-
+    cout << "Computes if a string has all unique characters. " << endl << endl;
+    while(true){
+        cout << "Insert string s: " << endl;
+        string s; cin >> s;
+        cout << "all unique characters: " << (isUnique(s)? "yes" : "no") << endl << endl;
+    }   
     return 0;
 }

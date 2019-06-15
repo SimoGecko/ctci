@@ -9,15 +9,19 @@ using namespace std;
 vector<int> minH, maxH; // min/max heap
 
 
-int getMedian() {
+double findMedian() {
 	if (maxH.empty()) return -1;
-	return maxH.front();
+	if (maxH.size() > minH.size()) return maxH.front();
+	double ans = maxH.front() - minH.front();
+	return ans / 2;
 }
 
 
 void add(int x) {
-	int m = getMedian();
-	bool gol = (x <= m || maxH.empty());
+	//double dm = findMedian();
+	//int m = static_cast<int>(round(dm));
+
+	bool gol = (maxH.empty() || x < maxH.front() || (minH.size() == maxH.size() && x <= -minH.front()));
 
 	if (gol && maxH.size() > minH.size()) {
 		//move one elem left
@@ -65,7 +69,7 @@ vector<int> t; // to test & make sure
 void printMedian(const vector<int>& A) {
 	cout << "[";
 	for (size_t i = 0; i < A.size(); ++i) {
-		if (i == (A.size()-1) / 2) cout << "|" << A[i] << "|, ";
+		if (i == (A.size() - 1) / 2) cout << "|" << A[i] << "|, ";
 		else cout << A[i] << ", ";
 	}
 	cout << "]" << endl;
@@ -83,7 +87,7 @@ int main() {
 			printMedian(t);
 
 			//actual
-			cout << "median = " << getMedian() << endl;
+			cout << "median = " << findMedian() << endl;
 		}
 		else {
 			int x = stoi(s);

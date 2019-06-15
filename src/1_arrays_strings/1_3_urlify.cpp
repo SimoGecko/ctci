@@ -1,41 +1,51 @@
+// (c) Simone Guggiari 2019 - CTCI
 #include <iostream>
 #include <string>
 
 using namespace std;
 
 //swap spaces to %20
-string Urlify(string& s){
-
+string urlify(const string& str) {
     //count spaces
     int spaces = 0;
-    for(int i = 0; i < s.length(); i++)
-    {
-        if(s.at(i)==' ') spaces++;
+    for (size_t i = 0; i < str.length(); ++i) {
+        if (str[i] == ' ') spaces++;
     }
-    
-    //setup string
-    char* c = new char[s.length() + spaces*2];
 
-    //go though, copy
-    int j=0;
-    for(int i = 0; i < s.length(); i++)
-    {
-        if(s.at(i)==' '){
-            c[j++] = '%';
-            c[j++] = '2';
-            c[j++] = '0';
-        }else{
-            c[j++]=s.at(i);
+    //corner cases
+    if (spaces == 0) return str;
+
+    //setup string
+    string s(str);
+    s.append(spaces * 2, ' '); // add required space
+
+                               //go though, copy
+    size_t j = s.size() - 1;
+    for (int i = str.size() - 1; i >= 0; --i) {
+        if (i == j) break;
+
+        if (s[i] == ' ') {
+            s[j--] = '0';
+            s[j--] = '2';
+            s[j--] = '%';
+        }
+        else {
+            s[j--] = s[i];
         }
     }
-    return string(c);
+
+    return move(s);
 }
 
 
-int WinMain()
-{
-    string s = "Mr John Smith";
-    cout << Urlify(s) << endl;
-
+int main() {
+    cout << "Swaps spaces with %20. " << endl << endl;
+    while (true) {
+        cout << "Insert string s: " << endl;
+        string s; //cin >> s;
+        getline(cin, s);
+        //s = "Mr John Smith";
+        cout << "urlify = " << urlify(s) << endl << endl;
+    }
     return 0;
 }
