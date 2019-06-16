@@ -5,10 +5,10 @@ You can find other suggested solutions on [CareerCup's GitHub page](https://gith
 
 ## Problem Table
 
-- . unsolved
-- ✓ solved, pen and paper (no code)
-- ✓+ solved, code available (C++)
-- ✗ try again
+- _  unsolved
+- V  solved, pen and paper (no code) (✓)
+- V+ solved, code available (C++) (✓+)
+- X  try again (✗)
 - \- (code improvable)
 
 Note:
@@ -19,7 +19,7 @@ Note:
 
 |          |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  | 14  |
 |----------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1. Arr   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |
+| 1. Arr   |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |  V+ |     |     |     |     |     |
 | 2. LL    |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |
 | 3. S,Q   |  _  |  _  |  _  |  _  |  _  |  _  |     |     |     |     |     |     |     |     |
 | 4. T,G   |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |  _  |     |     |
@@ -40,8 +40,21 @@ Note:
 |          |  _  |  _  |  V+ |  _  |  V+ |  V+ |  V+ |  V+ |  _  |  _  |  _  |  _  |  _  |     |
 
 
+
+
+<!---
+solved (V):	81
+retry  (X): 3
+remain (_): 105
+
+code   (+): 49
+notc   (-): 7
+-->
+
+
+
 ### Progress:
-(60/189) [######-------------] 32%
+(81/189) [########------------] 43%
 
 
 ## Problem List
