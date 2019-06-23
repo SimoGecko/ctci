@@ -1,0 +1,92 @@
+// super mario DP - O(n^3)
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
+#include <string>
+
+using namespace std;
+
+
+
+struct wk {
+	//wk(int _q, int _w) : q(_q), w(_w), m(static_cast<double>(_w)/_q) { }
+
+	wk() : q(0), w(0), m(0), p(true) {}
+
+	void set(int _q, int _w) {
+		q = _q;
+		w = _w;
+		m = static_cast<double>(w) / q;
+		p = true;
+	}
+
+	//double cost(){ return q*m; }
+
+	int q; // quality
+	int w; // wage
+	double m; // wage/quality
+	bool p; // possible
+};
+
+
+
+double mincostToHireWorkers(const vector<int>& quality, const vector<int>& wage, int K) {
+	int N = quality.size();
+
+	//setup workers
+	vector<wk> worker(N + 1);
+	for (size_t j = 0; j<N; j++) worker[j + 1].set(quality[j], wage[j]);
+
+	//table
+	vector<vector<wk>> T(K + 1, vector<wk>(N + 1));
+
+	for (size_t k = 1; k <= K; ++k) {
+		T[k][0].set(1, 100000000); // to avoid picking this
+
+		for (size_t j = 1; j <= N; ++j) {
+			//bool take = (T[k][j-1].first*T[k][j-1].second) /*not take*/ >= ((T[k-1][j-1].first+quality[j-1])*max(T[k-1][j-1].second, wage[j-1]/quality[j-1]));
+			int    bestQ = T[k][j - 1].q; // start assuming not taken
+			double bestM = T[k][j - 1].m; 
+			//double costWithout = T[k][j - 1].q*T[k][j - 1].m;
+			//double costWith = (T[k - 1][j - 1].q + worker[j].q) * max(T[k - 1][j - 1].m, worker[j].m);
+
+			for (int i = j - 1; i >= 0; --i) {
+				int totQ = T[k - 1][i].q + worker[j].q;
+				int maxM = max(T[k - 1][i].m, worker[j].m);
+				if (totQ*maxM < bestQ*bestM) { bestQ = totQ; bestM = maxM; }
+			}
+
+			/*
+			bool take = costWithout > costWith;
+
+			if (!take) {
+				T[k][j] = T[k][j - 1];
+			}
+			else {
+				T[k][j].q = T[k - 1][j - 1].q + worker[j].q;
+				T[k][j].m = max(T[k - 1][j - 1].m, worker[j].m);
+			}
+			*/
+			T[k][j].q = bestQ;
+			T[k][j].m = bestM;
+		}
+	}
+
+	return T[K][N].q*T[K][N].m;
+}
+
+
+
+
+
+int main() {
+	vector<int> quality = { 10, 20, 5 };
+	vector<int> wage    = { 70, 50, 30 };
+	int K = 2;
+
+	cout << mincostToHireWorkers(quality, wage, K) << endl;
+
+	int z; cin >> z;
+	return 0;
+}
